@@ -9,11 +9,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - run: npm install
-        working-directory: ./
+      - name: Yarn Install 
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install 
       - name: Build and deploy the theme
-        working-directory: ./
-        run: npm run zip
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: zip # will run `yarn build` command
         env:
           GHOST_ADMIN_API_URL: ${{ secrets.GHOST_ADMIN_API_URL }}
           GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
