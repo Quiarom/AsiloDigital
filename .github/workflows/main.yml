@@ -9,12 +9,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - uses: mskelton/setup-yarn@v1
-        with:
-          node-version: '10.x'
-      - run: yarn
+      - run: npm install 
       - name: Deploy Theme
-        run: yarn zip 
+        run: npm run zip 
         env:
           GHOST_ADMIN_API_URL: ${{ secrets.GHOST_ADMIN_API_URL }}
           GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
