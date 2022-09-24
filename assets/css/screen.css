@@ -359,8 +359,8 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .gh-author-image {
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 52px;
+    height: 52px;
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 50%;
@@ -431,6 +431,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-article-meta-inner {
     display: flex;
     align-items: center;
+    margin-top: 5px;
 }
 
 .gh-article-meta-sep {
@@ -688,6 +689,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
     .gh-cover-description {
         font-size: 1.7rem;
+    }
+
+    .gh-article-meta-inner {
+        margin-top: 10px;
     }
 
     .gh-topic-grid .gh-topic-content {
